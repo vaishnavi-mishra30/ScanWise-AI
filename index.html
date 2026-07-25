@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ScanWise AI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>SCANWISE AI</h1>
+        <p>A personalised food safety and nutrition app that recommends what you should eat and what to avoid based on your health profile, allergies, medical conditions, dietary preferences, and nutritional needs—helping you make safer, healthier food choices every day.</p>
+
+    </div>
+    <div id="profile-section" class="card">
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Age">
+        <label>Gender</label>
+        <select name="Gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label>Health Conditions</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="diabetes" value="Diabetes">
+            <label for="diabetes">Diabetes</label> 
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="hypertension" value="Hypertension">
+            <label for="hypertension">Hypertension</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="thyroid" value="Thyroid">
+            <label for="thyroid">Thyroid</label>  
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="heart" value="Heart-Disease">
+            <label for="heart">Heart-Disease</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="pcos" value="PCOS">
+            <label for="pcos">PCOS</label> 
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="pcod" value="PCOD">
+            <label for="pcod">PCOD</label>
+        </div>
+        <div>
+        <textarea id="other-conditions" placeholder="Any other health condition or disease "></textarea>
+        </div>
+        <div>
+            <label>Allergies</label>
+            <textarea id="allergies" placeholder="e.g. Nuts, Gluten, Lactose..."></textarea>
+        </div>
+        <div>
+            <label>Health Goals</label>
+            <textarea id="goals" placeholder="e.g. Weight loss, Muscle gain, Heart health..."></textarea> 
+        </div>
+        <button id="analyze-btn">Analyze</button>
+
+    </div>
+    <div id="result-section" class="card" style="display:none ;">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <button id="reset-btn">Reset</button>
+
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
