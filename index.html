@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScanWise AI</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanWise AI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="container">
-        <h1>SCANWISE AI</h1>
-        <p>A personalised food safety and nutrition app that recommends what you should eat and what to avoid based on your health profile, allergies, medical conditions, dietary preferences, and nutritional needs—helping you make safer, healthier food choices every day.</p>
-
+  <div id="disclaimer-banner">
+  ⚠️ ScanWise AI is for informational purposes only. 
+  It is not a substitute for professional medical advice. 
+  Please consult your doctor before making any health decisions.
+  </div>
+  
+  <div class="container">
+    <h1>SCANWISE AI</h1>
+    <p>A personalised food safety and nutrition app that recommends what you should eat and what to avoid based on your health profile, allergies, medical conditions, dietary preferences, and nutritional needs—helping you make safer, healthier food choices every day.</p>
     <div id="upload-section" class="card">
-        <h2>Upload Label Photo </h2>
-        <input type="file" id="file-input" accept="image/*">
-        <img id="preview" alt="Label preview">
+      <h2>Upload Label Photo</h2>
+      <input type="file" id="file-input" accept="image/*">
+      <img id="preview" alt="Label preview">
     </div>
     <div id="profile-section" class="card">
-        <label>Name</label>
-        <input type="text" id="name" placeholder="Name">
-        <label>Age</label>
-        <input type="number" id="age" placeholder="Age">
-        <label>Gender</label>
-        <select name="Gender" id="gender">
-            <option value="">Select</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <label>Health Conditions</label>
-        <div class="checkbox-group">
-            <input type="checkbox" id="diabetes" value="Diabetes">
-            <label for="diabetes">Diabetes</label> 
-        </div>
-        <div class="checkbox-group">
-            <input type="checkbox" id="hypertension" value="Hypertension">
-            <label for="hypertension">Hypertension</label>
-        </div>
-        <div class="checkbox-group">
-            <input type="checkbox" id="thyroid" value="Thyroid">
-            <label for="thyroid">Thyroid</label>  
-        </div>
-        <div class="checkbox-group">
-            <input type="checkbox" id="heart" value="Heart-Disease">
-            <label for="heart">Heart-Disease</label>
-        </div>
-        <div class="checkbox-group">
-            <input type="checkbox" id="pcos" value="PCOS">
-            <label for="pcos">PCOS</label> 
-        </div>
-        <div class="checkbox-group">
-            <input type="checkbox" id="pcod" value="PCOD">
-            <label for="pcod">PCOD</label>
-        </div>
-        <div>
-        <textarea id="other-conditions" placeholder="Any other health condition or disease "></textarea>
-        </div>
-        <div>
-            <label>Allergies</label>
-            <textarea id="allergies" placeholder="e.g. Nuts, Gluten, Lactose..."></textarea>
-        </div>
-        <div>
-            <label>Health Goals</label>
-            <textarea id="goals" placeholder="e.g. Weight loss, Muscle gain, Heart health..."></textarea> 
-        </div>
+      <h2>Your Health Profile</h2>
+
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Name">
+
+      <label>Age</label>
+      <input type="number" id="age" placeholder="Age">
+
+      <label>Gender</label>
+      <select id="gender">
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>Health Conditions</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="diabetes" value="Diabetes">
+        <label for="diabetes">Diabetes</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="hypertension" value="Hypertension">
+        <label for="hypertension">Hypertension</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="thyroid" value="Thyroid">
+        <label for="thyroid">Thyroid</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="heart" value="Heart Disease">
+        <label for="heart">Heart Disease</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="pcos" value="PCOS">
+        <label for="pcos">PCOS</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="pcod" value="PCOD">
+        <label for="pcod">PCOD</label>
+      </div>
+      <div>
+      <label>Any Other Conditions</label>
+      <textarea id="other-conditions" placeholder="Any other health condition or disease"></textarea>
+      </div>
+      <div>
+      <label>Allergies</label>
+      <textarea id="allergies" placeholder="e.g. Nuts, Gluten, Lactose..."></textarea>
+      </div>
+      <div >
+      <label>Health Goals</label>
+      <textarea id="goals" placeholder="e.g. Weight loss, Muscle gain, Heart health..."></textarea>
+      </div>
+
+      <button id="save-profile-btn">Save Profile</button>
+
     </div>
+
     <button id="analyze-btn" disabled>Analyze</button>
+
     <div id="result-section" class="card" style="display:none;">
-        <div id="verdict">
-
-        </div>
-        <div id="ingredients-box">
-
-        </div>
-        <div id="analysis-cards">
-
-        </div>
-        <button id="reset-btn">Reset</button>
-
+      <div id="verdict"></div>
+      <div id="ingredients-box"></div>
+      <div id="analysis-cards"></div>
+      <button id="reset-btn">Scan Another Product</button>
     </div>
- </div>  
- <script src="app.js"></script>
+    <div id="footer-disclaimer">
+      ⚠️ For informational purposes only. Not medical advice.
+      Always consult your doctor before making health decisions.
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
