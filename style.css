@@ -105,3 +105,58 @@ textarea:focus{
     margin-top: 10px;
     display: none;
 }
+input[type="checkbox"] {
+    width:auto;
+    margin-top: 0;
+}
+#save-profile-btn{
+    width: 100%;
+    padding: 11px;
+    margin-top: 1.25rem;
+    background: #3B6D11;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+#save-profile-btn:hover{
+    background: #2D5209;
+}
+#analyze-btn{
+    width: 100%;
+    padding: 13px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background: #534AB7;
+    color:white;
+    border:none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+#analyze-btn:hover:not(:disabled){
+    background: #3C3489;
+}
+#analyze-btn:disabled{
+    background: #bbb;
+    cursor: not-allowed;
+}
+#reset-btn{
+    width: 100%;
+    padding: 11px;
+    margin-top: 1rem;
+    background: transparent;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor:pointer;
+}
+#reset-btn:hover{
+    background: #f5f5f3;
+    color:#333;
+}
