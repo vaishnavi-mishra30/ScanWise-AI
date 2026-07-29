@@ -160,3 +160,15 @@ input[type="checkbox"] {
     background: #f5f5f3;
     color:#333;
 }
+#footer-disclaimer{
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    padding: 1rem;
+    margin-top:1rem;
+    border-top: 1px solid #eee;
+}
+#analyze-btn.loading{
+    background: #7C75D4;
+    cursor: wait;
+}
