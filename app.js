@@ -1,11 +1,17 @@
-let imagebase64=null;
+let imageBase64=null;
 
 const fileInput=document.getElementById("file-input");
 const preview=document.getElementById("preview");
 const analyzeBtn=document.getElementById("analyze-btn");
 const resultSection=document.getElementById("result-section");
 
-fileInput.addEventListener("chnage", function (e){
+fileInput.addEventListener("change", function (e){
+    console.log("File input changed");
+    console.log("Files:", e.target.files);
+  
+
+
+
     const file=e.target.files[0];
     if(!file) return;
 
