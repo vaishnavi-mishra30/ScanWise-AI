@@ -27,6 +27,17 @@ fileInput.addEventListener("change", function (e){
   };
 
   reader.readAsDataURL(file);
+function  getConditions(){
+    const checkboxes =[
+    { id: "diabetes",     label: "Diabetes"     },
+    { id: "hypertension", label: "Hypertension" },
+    { id: "thyroid",      label: "Thyroid"      },
+    { id: "heart",        label: "Heart Disease"},
+    { id: "pcos",         label: "PCOS"         },
+    { id: "pcod",         label: "PCOD"         }
+  ];
+}
+
 });
 
 
