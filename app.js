@@ -19,7 +19,6 @@ fileInput.addEventListener("change", function (e){
     preview.style.display = "block";
 
      const reader = new FileReader();
-
   reader.onload = function(ev) {
     imageBase64 = ev.target.result.split(",")[1];
     analyzeBtn.disabled = false;
@@ -27,6 +26,7 @@ fileInput.addEventListener("change", function (e){
   };
 
   reader.readAsDataURL(file);
+});
 function  getConditions(){
     const checkboxes =[
     { id: "diabetes",     label: "Diabetes"     },
@@ -36,10 +36,13 @@ function  getConditions(){
     { id: "pcos",         label: "PCOS"         },
     { id: "pcod",         label: "PCOD"         }
   ];
+   const ticked = [];
+  checkboxes.forEach(function(item) {
+    const checkbox = document.getElementById(item.id);
+    if (checkbox.checked === true) {
+      ticked.push(item.label);
+    }
+  });
+  if (ticked.length === 0) { return "None"; }
+  return ticked.join(", ");
 }
-
-});
-
-
-
-
