@@ -46,3 +46,22 @@ function  getConditions(){
   if (ticked.length === 0) { return "None"; }
   return ticked.join(", ");
 }
+function getProfile() {
+  const name            = document.getElementById("name").value;
+  const age             = document.getElementById("age").value;
+  const gender          = document.getElementById("gender").value;
+  const conditions      = getConditions();
+  const otherConditions = document.getElementById("other-conditions").value;
+  const allergies       = document.getElementById("allergies").value;
+  const goals           = document.getElementById("goals").value;
+
+  return {
+    name,
+    age,
+    gender,
+    conditions,
+    otherConditions,
+    allergies,
+    goals
+  };
+}
