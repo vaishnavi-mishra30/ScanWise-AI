@@ -8,9 +8,6 @@ const resultSection=document.getElementById("result-section");
 fileInput.addEventListener("change", function (e){
     console.log("File input changed");
     console.log("Files:", e.target.files);
-  
-
-
 
     const file=e.target.files[0];
     if(!file) return;
@@ -19,7 +16,7 @@ fileInput.addEventListener("change", function (e){
     preview.style.display = "block";
 
      const reader = new FileReader();
-  reader.onload = function(ev) {
+    reader.onload = function(ev) {
     imageBase64 = ev.target.result.split(",")[1];
     analyzeBtn.disabled = false;
     console.log("Image ready — base64 stored");
@@ -65,3 +62,16 @@ function getProfile() {
     goals
   };
 }
+analyzeBtn.addEventListener("click", async function() {
+    console.log("Analyze clicked");
+    const profile= getProfile();
+    console.log(profile);
+    const response = await fetch("http://127.0.0.1:5000/analyze", {
+      method:"POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(profile)
+    });
+});
+
