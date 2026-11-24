@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background:#f5f5f3 ;
+    background:#EDF4EE;
     font-family: Arial, sans-serif;
 }
 .container{
@@ -21,32 +21,32 @@ body{
     border-bottom: 1px solid #F0AD4E;
 }
 h1{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
-    color:#534AB7;
-    margin-bottom: 8px;
+    color:#245C45;
+    margin-bottom: 12px;
     margin-top: 1rem;
 }
 p{
-    color:#666;
+    color:#47564D;
     font-size: 14px;
-    line-height:1.6;
-    margin-bottom:1.5rem ;
+    line-height:1.4;
+    margin-bottom:1rem ;
 
 }
 .card{
-    background: #EEEDFE;
-    border-radius: 12px;
-    border: 1px solid #e5e5e5;
-    padding: 1.25rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E1E7E2 ;
+    padding: 1.5rem;
     margin-bottom: 1rem;
 }
 .card h2{
-    font-size: 14px;
-    font-weight:600;
-    color:#888;
+    font-size: 13px;
+    font-weight:700;
+    color:#245C45;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     margin-bottom: 1rem;
 }
 label{
@@ -59,116 +59,155 @@ label{
 input[type="text"],
 input[type="number"],
 select{
-    width: 70%;
-    padding: 5px;
+    width: 100%;
+    padding: 12px;
     margin-top: 6px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid #D5DED7;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #263B30;
     font-size: 14px;
     font-family:Arial, sans-serif; 
 }
 textarea{
     width:100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 6px;
-    border:1px solid #ddd;
-    border-radius: 8px;
+    border:1px solid #D5DED7;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #263B30;
     font-size: 14px;
     font-family : Arial, sans-serif;
-    height: 80px;
+    line-height: 1.5;
+    min-height: 100px;
     resize:vertical;
 }
 input:focus,
 select:focus,
 textarea:focus{
-    outline: none;
-    border-color:  #534AB7;
+    outline: 2px solid #B8D3BE;
+    border-color:  #245C45;
 }
 .checkbox-group{
     display:flex;
     flex-direction: row;
     align-items:center;
-    gap: 8px;
-    margin-top:8px;
+    gap: 10px;
+    margin-top:10px;
 }
 .checkbox-group label{
     display: inline;
     margin-top: 0;
+    font-size: 14px;
     font-weight: 400;
-    color:#333;
+    color: #47564D;
+    cursor: pointer;
 }
 #preview{
     width: 100%;
-    max-height: 200px;
-    object-fit:cover;
-    border-radius: 8px;
-    margin-top: 10px;
+    max-height: 220px;
+    object-fit:contain;
+    border-radius: 12px;
+    margin-top: 12px;
+    border: 1px solid #E1E7E2;
+    background: #FFFFFF;
     display: none;
 }
 input[type="checkbox"] {
-    width:auto;
+     width: 16px;
+    height: 16px;
     margin-top: 0;
+    accent-color: #245C45;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 #save-profile-btn{
     width: 100%;
-    padding: 11px;
+    padding: 13px;
     margin-top: 1.25rem;
-    background: #3B6D11;
-    color: white;
+    background: #245C45;
+    color: #FFFFFF;
     border: none;
-    border-radius: 8px;
-    font-size: 14px;
+    border-radius: 10px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s ease;
 
 }
 #save-profile-btn:hover{
-    background: #2D5209;
+    background: #194632;
 }
 #analyze-btn{
     width: 100%;
-    padding: 13px;
+    padding: 14px;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    background: #534AB7;
-    color:white;
+    background:#245C45 ;
+    color:#FFFFFF;
     border:none;
-    border-radius: 8px;
-    font-size: 15px;
+    border-radius: 10px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 #analyze-btn:hover:not(:disabled){
-    background: #3C3489;
+    background: #194632;
 }
 #analyze-btn:disabled{
-    background: #bbb;
+    background: #B7C5BC;
     cursor: not-allowed;
 }
 #reset-btn{
     width: 100%;
-    padding: 11px;
+    padding: 12px;
     margin-top: 1rem;
     background: transparent;
-    color: #666;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    color: #47564D;
+    border: 1px solid #D5DED7;
+    border-radius: 10px;
     font-size: 14px;
+    font-weight: 600;
     cursor:pointer;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 #reset-btn:hover{
-    background: #f5f5f3;
-    color:#333;
+    background: #E4EDE5;
+    color:#245C45;
 }
 #footer-disclaimer{
     text-align: center;
     font-size: 12px;
-    color: #999;
-    padding: 1rem;
-    margin-top:1rem;
-    border-top: 1px solid #eee;
+     line-height: 1.6;
+    color: #718078;
+    padding: 1.25rem 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #E1E7E2;
 }
 #analyze-btn.loading{
     background: #7C75D4;
     cursor: wait;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+    }
 }
